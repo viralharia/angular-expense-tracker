@@ -1,5 +1,5 @@
 export interface IExpense{
-    key:string;
+    key?:string;
     price:number;
     title:string;
     description?:string

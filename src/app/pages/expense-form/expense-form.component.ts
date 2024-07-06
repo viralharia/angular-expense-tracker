@@ -29,7 +29,7 @@ export class ExpenseFormComponent implements OnInit{
     this.activatedRoute.params.subscribe({
       next:(params) => {
         this.expenseId = params['id'];
-
+        console.log("inside activated route..."+this.expenseId);
         if(this.expenseId !== ''){
           this.populateExpense(this.expenseId);
         }
@@ -41,6 +41,7 @@ export class ExpenseFormComponent implements OnInit{
     console.log(this.expenseForm.valid);
     if(this.expenseForm.valid){
       console.log(this.expenseForm.value);
+      console.log("expenseID = "+this.expenseId);
       if(this.expenseId !== ''){
         this.expenseService.updateExpense(this.expenseId, this.expenseForm.value);
       }else{
@@ -55,7 +56,7 @@ export class ExpenseFormComponent implements OnInit{
 
   populateExpense(key: string){
     let expense:IExpense | undefined = this.expenseService.getExpense(key);
-
+    console.log("inside populate expense, key = "+key+"expense = "+expense);
     if(expense !== undefined){
       this.expenseForm.patchValue(expense);
     }else{

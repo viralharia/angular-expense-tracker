@@ -9,10 +9,10 @@ export class ExpenseService {
   expenses:IExpense[] = [];
 
   constructor() { 
-    this.addExpense({'key':'1','price':10, 'title':'title1','description':'description 1'});
-    this.addExpense({'key':'2','price':20, 'title':'title 2','description':'description 2'});
-    this.addExpense({'key':'3','price':30, 'title':'title 3','description':'description 3'});
-    this.addExpense({'key':'4','price':40, 'title':'title 4','description':'description 4'});
+    this.addExpense({'price':10, 'title':'title1','description':'description 1'});
+    this.addExpense({'price':20, 'title':'title 2','description':'description 2'});
+    this.addExpense({'price':30, 'title':'title 3','description':'description 3'});
+    this.addExpense({'price':40, 'title':'title 4','description':'description 4'});
   }
 
   getAllExpenses(): IExpense[]{
@@ -20,6 +20,7 @@ export class ExpenseService {
   }
 
   addExpense(expense:IExpense){
+    expense.key = ""+this.expenses.length;
     this.expenses.push(expense);
   }
 

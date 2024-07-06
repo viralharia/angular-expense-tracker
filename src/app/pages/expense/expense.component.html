@@ -11,8 +11,8 @@
           <h2 class="fw-bold text-success">${{expense.price}}</h2>
           <p class="card-text">{{expense.description}}</p>
           <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-success" (click)="editExpense(expense.key)">Edit</button>
-            <button class="btn btn-sm btn-danger" (click)="removeExpense(expense.key)">Remove</button>
+            <button class="btn btn-sm btn-success" (click)="editExpense(expense.key!)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="removeExpense(expense.key!)">Remove</button>
           </div>
         </div>
       </div>
