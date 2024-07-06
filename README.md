@@ -1,27 +1,19 @@
 # ExpenseTracker
 
+This is a simple expense tracker app built to practise Angular development.
+
+It does not interact with any backend api or store the data in local storage. It stores the data within the app.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
-## Development server
+## To run in local
+* checkout the repo and go to the project directory in terminal.
+* Run `npm install` command.
+* Run `ng serve` command. Navigate to `http://localhost:4200/`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshots
+* Home page shows list of expenses and total expense
+![list_of_expenses page](./app_screenshots/list_of_expenses.png)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Form to Add new expense or edit the existing expense
+![list_of_expenses page](./app_screenshots/add_new_expense.png)
